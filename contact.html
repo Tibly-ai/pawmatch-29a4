@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | PawMatch</title>
+<meta name="description" content="Reach PawMatch's adoption counselors with questions about a specific animal, schedule a meet-and-greet, or get help finding your perfect match.">
+<link rel="canonical" href="https://pawmatch-29a4.sites.tibly.ai/contact">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pawmatch-29a4.sites.tibly.ai/contact">
+<meta property="og:site_name" content="PawMatch">
+<meta property="og:title" content="Contact Us | PawMatch">
+<meta property="og:description" content="Reach PawMatch's adoption counselors with questions about a specific animal, schedule a meet-and-greet, or get help finding your perfect match.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-brand-50: #fdf3ef;
+  --color-brand-100: #fae3d9;
+  --color-brand-200: #f3c6b1;
+  --color-brand-300: #eaa583;
+  --color-brand-400: #e08659;
+  --color-brand-500: #d4704a;
+  --color-brand-600: #c25c38;
+  --color-brand-700: #a1492c;
+  --color-brand-800: #7d3a24;
+  --color-brand-900: #5f2c1c;
+
+  --color-accent-50: #f0f7f3;
+  --color-accent-100: #dceee2;
+  --color-accent-200: #b9ddc7;
+  --color-accent-300: #93c9a9;
+  --color-accent-400: #7fb896;
+  --color-accent-500: #6ba887;
+  --color-accent-600: #56906f;
+  --color-accent-700: #43735a;
+  --color-accent-800: #345945;
+  --color-accent-900: #2d4a3a;
+
+  --color-surface: #ffffff;
+  --color-ink: #2c3e2f;
+  --color-secondary: #f4e4d7;
+  --color-background: #fafbf8;
+
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 2rem;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md bg-brand-600 px-5 py-2.5 font-display text-sm font-medium text-white shadow-sm transition-colors hover:bg-brand-700;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-accent-500 px-5 py-2.5 font-display text-sm font-medium text-white shadow-sm transition-colors hover:bg-accent-600;
+  }
+  .card {
+    @apply rounded-lg bg-surface p-5 shadow-sm ring-1 ring-brand-100;
+  }
+}
+</style>
+</head>
+<body>
+<!-- block:header -->
+<header class="bg-surface border-b border-brand-100">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+    <a href="/" class="font-display text-2xl font-semibold text-brand-600">
+      Paw<span class="text-accent-600">Match</span>
+    </a>
+    <nav class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-ink sm:text-base">
+      <a href="/" class="transition-colors hover:text-brand-600">Home</a>
+      <a href="/how-it-works" class="transition-colors hover:text-brand-600">How It Works</a>
+      <a href="/available-animals" class="transition-colors hover:text-brand-600">Animals</a>
+      <a href="/contact" class="transition-colors hover:text-brand-600">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- /block:header -->
+<!-- block:hero -->
+<section class="bg-secondary" data-block="hero">
+  <div class="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6 sm:py-20">
+    <p class="font-display text-sm font-semibold uppercase tracking-wide text-brand-600">We'd love to hear from you</p>
+    <h1 class="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">Let's Talk About Your Next Best Friend</h1>
+    <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink/80 sm:text-lg">
+      Whether you have questions about a specific animal, need guidance choosing a match, or want to book a meet-and-greet, our adoption counselors are ready to help.
+    </p>
+  </div>
+</section>
+<!-- /block:hero -->
+<!-- block:form -->
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6" data-block="form">
+  <div class="grid gap-10 lg:grid-cols-5">
+    <div class="lg:col-span-3">
+      <div class="card">
+        <h2 class="font-display text-2xl font-semibold text-ink">Send Us a Message</h2>
+        <p class="mt-2 text-sm text-ink/70">
+          Fill out the form below and a counselor will get back to you within one business day.
+        </p>
+        <form method="POST" action="https://api.tibly.ai/api/public/site-forms" class="mt-6 space-y-5">
+          <input type="hidden" name="_page" value="/contact">
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="name" class="mb-1.5 block text-sm font-medium text-ink">Full Name</label>
+              <input type="text" id="name" name="name" required placeholder="Jamie Rivera"
+                class="w-full rounded-md border border-brand-100 bg-background px-4 py-2.5 text-ink placeholder:text-ink/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+            </div>
+            <div>
+              <label for="email" class="mb-1.5 block text-sm font-medium text-ink">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="jamie@email.com"
+                class="w-full rounded-md border border-brand-100 bg-background px-4 py-2.5 text-ink placeholder:text-ink/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+            </div>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="phone" class="mb-1.5 block text-sm font-medium text-ink">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567"
+                class="w-full rounded-md border border-brand-100 bg-background px-4 py-2.5 text-ink placeholder:text-ink/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+            </div>
+            <div>
+              <label for="animal" class="mb-1.5 block text-sm font-medium text-ink">Animal of Interest (if any)</label>
+              <input type="text" id="animal" name="animal" placeholder="e.g. Biscuit, ID #4821"
+                class="w-full rounded-md border border-brand-100 bg-background px-4 py-2.5 text-ink placeholder:text-ink/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+            </div>
+          </div>
+
+          <div>
+            <label for="reason" class="mb-1.5 block text-sm font-medium text-ink">What can we help with?</label>
+            <select id="reason" name="reason"
+              class="w-full rounded-md border border-brand-100 bg-background px-4 py-2.5 text-ink focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+              <option>General question</option>
+              <option>Ask about a specific animal</option>
+              <option>Schedule a meet-and-greet</option>
+              <option>Help choosing a match</option>
+              <option>Post-adoption support</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="mb-1.5 block text-sm font-medium text-ink">Message</label>
+            <textarea id="message" name="message" required rows="5" placeholder="Tell us a bit about your household, experience, and what you're looking for in a companion..."
+              class="w-full rounded-md border border-brand-100 bg-background px-4 py-2.5 text-ink placeholder:text-ink/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200"></textarea>
+          </div>
+
+          <button type="submit" class="btn w-full sm:w-auto">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="space-y-6 lg:col-span-2">
+      <div class="card">
+        <h3 class="font-display text-lg font-semibold text-ink">Visit or Call</h3>
+        <p class="mt-3 text-sm leading-relaxed text-ink/75">123 Shelter Lane<br>Riverside, CA 92501</p>
+        <p class="mt-2 text-sm text-ink/75">(555) 019-2837</p>
+        <p class="text-sm text-ink/75">hello@pawmatch.org</p>
+        <p class="mt-3 text-sm font-medium text-ink">Hours</p>
+        <p class="text-sm text-ink/75">Tue–Sat, 10am–5pm<br>Closed Sun & Mon</p>
+      </div>
+
+      <div class="card border-l-4 border-accent-500">
+        <h3 class="font-display text-lg font-semibold text-ink">Schedule a Meet-and-Greet</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink/75">
+          Ready to meet someone in particular? Mention their name in the form and select "Schedule a meet-and-greet" — we'll follow up with available time slots at our facility.
+        </p>
+      </div>
+
+      <div class="card bg-secondary/60 ring-brand-100">
+        <h3 class="font-display text-lg font-semibold text-ink">Prefer to Browse First?</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink/75">
+          Explore adoptable animals and filter by temperament, energy level, and needs before reaching out.
+        </p>
+        <a href="/available-animals" class="btn-secondary mt-4">View Available Animals</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /block:form -->
+<!-- block:faq -->
+<section class="bg-surface border-t border-brand-100" data-block="faq">
+  <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+    <h2 class="text-center font-display text-3xl font-bold text-ink">Quick Answers</h2>
+    <div class="mt-10 space-y-6">
+      <div class="card">
+        <h3 class="font-display text-base font-semibold text-ink">How soon can I meet an animal?</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink/75">
+          Most meet-and-greets can be scheduled within 2–3 days of your request, depending on the animal's availability and any current holds.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="font-display text-base font-semibold text-ink">Do I need an appointment to visit?</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink/75">
+          Walk-ins are welcome during open hours, but scheduling ahead ensures a counselor is free to walk you through introductions.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="font-display text-base font-semibold text-ink">Can you help me choose the right animal?</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink/75">
+          Absolutely — tell us about your home, experience, and lifestyle in the form, and a counselor will suggest good-fit matches based on temperament and care needs.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /block:faq -->
+<!-- block:footer -->
+<footer class="bg-ink text-secondary">
+  <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3">
+    <div>
+      <p class="font-display text-xl font-semibold text-white">PawMatch</p>
+      <p class="mt-2 text-sm leading-relaxed text-secondary/90">
+        Helping shelter animals find the right home, and the right person find the right companion.
+      </p>
+    </div>
+    <div class="text-sm leading-relaxed text-secondary/90">
+      <p class="font-display text-base font-semibold text-white">Contact</p>
+      <p class="mt-2">123 Shelter Lane, Riverside, CA</p>
+      <p>hello@pawmatch.org</p>
+      <p>(555) 019-2837</p>
+    </div>
+    <div>
+      <p class="font-display text-base font-semibold text-white">Navigate</p>
+      <nav class="mt-2 flex flex-col gap-1.5 text-sm text-secondary/90">
+        <a href="/" class="transition-colors hover:text-white">Home</a>
+        <a href="/how-it-works" class="transition-colors hover:text-white">How It Works</a>
+        <a href="/available-animals" class="transition-colors hover:text-white">Animals</a>
+        <a href="/contact" class="transition-colors hover:text-white">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="border-t border-white/10 px-4 py-4 text-center text-xs text-secondary/70 sm:px-6">
+    © 2024 PawMatch. Every animal deserves a loving home.
+  </div>
+</footer>
+<!-- /block:footer -->
+  <script async src="https://api.tibly.ai/widget/v1.js"></script>
+</body>
+</html>
