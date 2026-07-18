@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Available Animals | PawMatch</title>
+<meta name="description" content="Browse adoptable dogs, cats, and other shelter animals at PawMatch. Filter by species, age, temperament, health needs, and household compatibility to find your match.">
+<link rel="canonical" href="https://pawmatch-29a4.sites.tibly.ai/available-animals">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pawmatch-29a4.sites.tibly.ai/available-animals">
+<meta property="og:site_name" content="PawMatch">
+<meta property="og:title" content="Available Animals | PawMatch">
+<meta property="og:description" content="Browse adoptable dogs, cats, and other shelter animals at PawMatch. Filter by species, age, temperament, health needs, and household compatibility to find your match.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-brand-50: #fdf3ef;
+  --color-brand-100: #fae3d9;
+  --color-brand-200: #f3c6b1;
+  --color-brand-300: #eaa583;
+  --color-brand-400: #e08659;
+  --color-brand-500: #d4704a;
+  --color-brand-600: #c25c38;
+  --color-brand-700: #a1492c;
+  --color-brand-800: #7d3a24;
+  --color-brand-900: #5f2c1c;
+
+  --color-accent-50: #f0f7f3;
+  --color-accent-100: #dceee2;
+  --color-accent-200: #b9ddc7;
+  --color-accent-300: #93c9a9;
+  --color-accent-400: #7fb896;
+  --color-accent-500: #6ba887;
+  --color-accent-600: #56906f;
+  --color-accent-700: #43735a;
+  --color-accent-800: #345945;
+  --color-accent-900: #2d4a3a;
+
+  --color-surface: #ffffff;
+  --color-ink: #2c3e2f;
+  --color-secondary: #f4e4d7;
+  --color-background: #fafbf8;
+
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 2rem;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md bg-brand-600 px-5 py-2.5 font-display text-sm font-medium text-white shadow-sm transition-colors hover:bg-brand-700;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-accent-500 px-5 py-2.5 font-display text-sm font-medium text-white shadow-sm transition-colors hover:bg-accent-600;
+  }
+  .card {
+    @apply rounded-lg bg-surface p-5 shadow-sm ring-1 ring-brand-100;
+  }
+}
+</style>
+</head>
+<body>
+<!-- block:header -->
+<header class="bg-surface border-b border-brand-100">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+    <a href="/" class="font-display text-2xl font-semibold text-brand-600">
+      Paw<span class="text-accent-600">Match</span>
+    </a>
+    <nav class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-ink sm:text-base">
+      <a href="/" class="transition-colors hover:text-brand-600">Home</a>
+      <a href="/how-it-works" class="transition-colors hover:text-brand-600">How It Works</a>
+      <a href="/available-animals" class="transition-colors hover:text-brand-600">Animals</a>
+      <a href="/contact" class="transition-colors hover:text-brand-600">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- /block:header -->
+<!-- block:hero -->
+<section class="bg-secondary/60" data-block="hero">
+  <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-20">
+    <div class="max-w-2xl">
+      <p class="font-display text-sm font-semibold uppercase tracking-wide text-brand-600">Available Animals</p>
+      <h1 class="mt-2 font-display text-4xl font-semibold text-ink sm:text-5xl">Every one of them is ready to love you back.</h1>
+      <p class="mt-4 text-lg leading-relaxed text-ink/80">
+        These animals are currently waiting at partner shelters near you. Use the filters below to narrow down by species, age, temperament, health needs, and what kind of home fits them best.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- /block:hero -->
+<!-- block:browse -->
+<section class="bg-background" data-block="browse">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+    <div class="grid gap-8 md:grid-cols-[260px_1fr]">
+
+      <!-- Filters -->
+      <aside class="card h-fit md:sticky md:top-6">
+        <h2 class="font-display text-lg font-semibold text-ink">Filter Animals</h2>
+        <form class="mt-4 space-y-6" method="GET" action="/available-animals">
+
+          <div>
+            <label for="species" class="block font-display text-sm font-medium text-ink">Species</label>
+            <select id="species" name="species" class="mt-1.5 w-full rounded-md border border-brand-100 bg-surface px-3 py-2 text-sm text-ink focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+              <option value="">Any species</option>
+              <option value="dog">Dogs</option>
+              <option value="cat">Cats</option>
+              <option value="small-pet">Small pets</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="age" class="block font-display text-sm font-medium text-ink">Age</label>
+            <select id="age" name="age" class="mt-1.5 w-full rounded-md border border-brand-100 bg-surface px-3 py-2 text-sm text-ink focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+              <option value="">Any age</option>
+              <option value="baby">Baby</option>
+              <option value="young">Young</option>
+              <option value="adult">Adult</option>
+              <option value="senior">Senior</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend class="font-display text-sm font-medium text-ink">Temperament</legend>
+            <div class="mt-1.5 space-y-1.5 text-sm text-ink/80">
+              <label class="flex items-center gap-2"><input type="checkbox" name="temperament" value="gentle" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Gentle &amp; calm</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="temperament" value="playful" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Playful &amp; energetic</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="temperament" value="independent" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Independent</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="temperament" value="affectionate" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Affectionate</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="font-display text-sm font-medium text-ink">Health Needs</legend>
+            <div class="mt-1.5 space-y-1.5 text-sm text-ink/80">
+              <label class="flex items-center gap-2"><input type="checkbox" name="health" value="none" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">No special needs</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="health" value="medication" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Ongoing medication</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="health" value="mobility" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Mobility support</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="health" value="senior-care" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Senior care</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="font-display text-sm font-medium text-ink">Household Fit</legend>
+            <div class="mt-1.5 space-y-1.5 text-sm text-ink/80">
+              <label class="flex items-center gap-2"><input type="checkbox" name="fit" value="kids" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Good with kids</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="fit" value="dogs" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Good with other dogs</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="fit" value="cats" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Good with cats</label>
+              <label class="flex items-center gap-2"><input type="checkbox" name="fit" value="apartment" class="rounded border-brand-200 text-brand-600 focus:ring-brand-300">Apartment friendly</label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn w-full">Apply Filters</button>
+        </form>
+      </aside>
+
+      <!-- Results -->
+      <div>
+        <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <p class="text-sm text-ink/70"><span class="font-semibold text-ink">12</span> animals currently available</p>
+          <select class="rounded-md border border-brand-100 bg-surface px-3 py-2 text-sm text-ink focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+            <option>Sort: Newest arrivals</option>
+            <option>Sort: Longest waiting</option>
+            <option>Sort: Age (youngest)</option>
+          </select>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div class="card flex flex-col overflow-hidden p-0">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=60" alt="Biscuit, a tan and white senior beagle mix" class="h-48 w-full object-cover">
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-start justify-between">
+                <h3 class="font-display text-lg font-semibold text-ink">Biscuit</h3>
+                <span class="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-brand-700">Senior</span>
+              </div>
+              <p class="mt-1 text-sm text-ink/70">Beagle mix &middot; 9 years &middot; 28 lbs</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Gentle</span>
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Good w/ kids</span>
+                <span class="rounded-full bg-brand-100 px-2.5 py-1 text-xs font-medium text-brand-700">Joint medication</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/80">A quiet couch companion who loves slow walks and afternoon naps. Needs a home with no stairs.</p>
+              <a href="/contact" class="btn mt-4 w-full">Meet Biscuit</a>
+            </div>
+          </div>
+
+          <div class="card flex flex-col overflow-hidden p-0">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=60" alt="Juniper, a black and white kitten" class="h-48 w-full object-cover">
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-start justify-between">
+                <h3 class="font-display text-lg font-semibold text-ink">Juniper</h3>
+                <span class="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-brand-700">Baby</span>
+              </div>
+              <p class="mt-1 text-sm text-ink/70">Domestic Shorthair &middot; 5 months &middot; 4 lbs</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Playful</span>
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Apartment ok</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/80">Curious and chatty, Juniper loves toy mice and warm laps. Best with an experienced kitten household.</p>
+              <a href="/contact" class="btn mt-4 w-full">Meet Juniper</a>
+            </div>
+          </div>
+
+          <div class="card flex flex-col overflow-hidden p-0">
+            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=500&q=60" alt="Duke, a large brown mixed-breed dog" class="h-48 w-full object-cover">
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-start justify-between">
+                <h3 class="font-display text-lg font-semibold text-ink">Duke</h3>
+                <span class="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-brand-700">Adult</span>
+              </div>
+              <p class="mt-1 text-sm text-ink/70">Shepherd mix &middot; 3 years &middot; 62 lbs</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Energetic</span>
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Good w/ dogs</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/80">Loves fetch, trails, and long runs. Needs a yard or an active family who hikes on weekends.</p>
+              <a href="/contact" class="btn mt-4 w-full">Meet Duke</a>
+            </div>
+          </div>
+
+          <div class="card flex flex-col overflow-hidden p-0">
+            <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=500&q=60" alt="Willow, a grey tabby cat" class="h-48 w-full object-cover">
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-start justify-between">
+                <h3 class="font-display text-lg font-semibold text-ink">Willow</h3>
+                <span class="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-brand-700">Adult</span>
+              </div>
+              <p class="mt-1 text-sm text-ink/70">Grey Tabby &middot; 4 years &middot; 9 lbs</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Independent</span>
+                <span class="rounded-full bg-brand-100 px-2.5 py-1 text-xs font-medium text-brand-700">Special diet</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/80">Prefers quiet company and a sunny windowsill. Managed food allergy, easy to maintain with prescription diet.</p>
+              <a href="/contact" class="btn mt-4 w-full">Meet Willow</a>
+            </div>
+          </div>
+
+          <div class="card flex flex-col overflow-hidden p-0">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=60" alt="Peanut, a small tan puppy" class="h-48 w-full object-cover">
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-start justify-between">
+                <h3 class="font-display text-lg font-semibold text-ink">Peanut</h3>
+                <span class="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-brand-700">Baby</span>
+              </div>
+              <p class="mt-1 text-sm text-ink/70">Terrier mix &middot; 4 months &middot; 12 lbs</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Playful</span>
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Good w/ kids</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/80">A bouncy bundle of energy who's still learning the basics. Needs patient, first-time-puppy-friendly owners.</p>
+              <a href="/contact" class="btn mt-4 w-full">Meet Peanut</a>
+            </div>
+          </div>
+
+          <div class="card flex flex-col overflow-hidden p-0">
+            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=500&q=60" alt="Otis, a three-legged dog resting" class="h-48 w-full object-cover">
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex items-start justify-between">
+                <h3 class="font-display text-lg font-semibold text-ink">Otis</h3>
+                <span class="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium text-brand-700">Adult</span>
+              </div>
+              <p class="mt-1 text-sm text-ink/70">Lab mix &middot; 5 years &middot; 55 lbs</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-accent-100 px-2.5 py-1 text-xs font-medium text-accent-800">Affectionate</span>
+                <span class="rounded-full bg-brand-100 px-2.5 py-1 text-xs font-medium text-brand-700">Mobility support</span>
+              </div>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-ink/80">A tripod who gets around just fine on flat ground. Sweet-natured and thrives on single-level living.</p>
+              <a href="/contact" class="btn mt-4 w-full">Meet Otis</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-10 flex justify-center">
+          <button type="button" class="btn-secondary">Load More Animals</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /block:browse -->
+<!-- block:match-help -->
+<section class="bg-secondary/60" data-block="match-help">
+  <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-16">
+    <div class="grid gap-8 md:grid-cols-2 md:items-center">
+      <div>
+        <h2 class="font-display text-3xl font-semibold text-ink">Not sure who's right for your home?</h2>
+        <p class="mt-3 text-ink/80 leading-relaxed">
+          Our team can walk through your lifestyle, living space, and experience level to suggest animals whose temperament and health needs genuinely fit — no guesswork required.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="/how-it-works" class="btn">See How Matching Works</a>
+          <a href="/contact" class="btn-secondary">Talk to Our Team</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="font-display text-lg font-semibold text-ink">Quick compatibility check</h3>
+        <p class="mt-2 text-sm text-ink/70">Tell us a bit about your household and we'll shortlist a few good matches for you.</p>
+        <form method="POST" action="https://api.tibly.ai/api/public/site-forms" class="mt-4 space-y-3">
+          <input type="hidden" name="_page" value="/available-animals">
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="text" name="name" placeholder="Your name" required class="w-full rounded-md border border-brand-100 bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+          <input type="email" name="email" placeholder="Email address" required class="w-full rounded-md border border-brand-100 bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200">
+          <textarea name="message" rows="3" placeholder="Tell us about your home, family, and what you're looking for" class="w-full rounded-md border border-brand-100 bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200"></textarea>
+          <button type="submit" class="btn w-full">Get Matched</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /block:match-help -->
+<!-- block:footer -->
+<footer class="bg-ink text-secondary">
+  <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3">
+    <div>
+      <p class="font-display text-xl font-semibold text-white">PawMatch</p>
+      <p class="mt-2 text-sm leading-relaxed text-secondary/90">
+        Helping shelter animals find the right home, and the right person find the right companion.
+      </p>
+    </div>
+    <div class="text-sm leading-relaxed text-secondary/90">
+      <p class="font-display text-base font-semibold text-white">Contact</p>
+      <p class="mt-2">123 Shelter Lane, Riverside, CA</p>
+      <p>hello@pawmatch.org</p>
+      <p>(555) 019-2837</p>
+    </div>
+    <div>
+      <p class="font-display text-base font-semibold text-white">Navigate</p>
+      <nav class="mt-2 flex flex-col gap-1.5 text-sm text-secondary/90">
+        <a href="/" class="transition-colors hover:text-white">Home</a>
+        <a href="/how-it-works" class="transition-colors hover:text-white">How It Works</a>
+        <a href="/available-animals" class="transition-colors hover:text-white">Animals</a>
+        <a href="/contact" class="transition-colors hover:text-white">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="border-t border-white/10 px-4 py-4 text-center text-xs text-secondary/70 sm:px-6">
+    © 2024 PawMatch. Every animal deserves a loving home.
+  </div>
+</footer>
+<!-- /block:footer -->
+  <script async src="https://api.tibly.ai/widget/v1.js"></script>
+</body>
+</html>
